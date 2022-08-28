@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -10,12 +13,94 @@
 
   /* Neutral */
   --very-dark-blue: hsl(212, 21%, 14%);
+  --very-dark-blue-alpha: hsla(212, 22%, 14%, 0.3);
   --dark-grayish-blue: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
 }
 
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--cream);
   min-height: 100vh;
+  padding: 1.7rem 1rem;
+  width: 100%;
+}
+
+.card-product {
+  display: flex;
+  flex-flow: column;
+  border-radius: 0.625rem;
+  box-shadow: 0 2px 10px var(--very-dark-blue-alpha);
+  width: 100%;
+}
+
+.card-product__image {
+  border-radius: 0.625rem 0.625rem 0 0;
+  width: 100%;
+}
+
+.card-product__info {
+  color: var(--dark-grayish-blue);
+  background-color: var(--white);
+  border-radius: 0 0 0.625rem 0.625rem;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.card-product__info-category {
+  font-size: 0.875rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-product__info-name {
+  color: var(--very-dark-blue);
+  font-family: "Fraunces", sans-serif;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.card-product__info-description {
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.card-product__price {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-product__price-discount {
+  font-family: "Fraunces", sans-serif;
+  color: var(--dark-cyan);
+  font-size: 2rem;
+}
+
+.card-product__price-original {
+  text-decoration: line-through;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.btn--primary {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  padding: 1rem 0;
+  border-radius: 0.625rem;
   width: 100%;
 }
