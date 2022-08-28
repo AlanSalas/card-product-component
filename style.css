@@ -28,7 +28,7 @@ html {
   align-items: center;
   justify-content: center;
   background-color: var(--cream);
-  min-height: 100vh;
+  height: 100vh;
   padding: 1.7rem 1rem;
   width: 100%;
 }
@@ -37,7 +37,8 @@ html {
   display: flex;
   flex-flow: column;
   border-radius: 0.625rem;
-  box-shadow: 0 2px 10px var(--very-dark-blue-alpha);
+  box-shadow: 0 5px 10px var(--very-dark-blue-alpha);
+  height: 100%;
   width: 100%;
 }
 
@@ -46,18 +47,27 @@ html {
   width: 100%;
 }
 
+.card-product__image-desktop {
+  display: none;
+  object-fit: cover;
+  width: 50%;
+}
+
 .card-product__info {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
   color: var(--dark-grayish-blue);
   background-color: var(--white);
   border-radius: 0 0 0.625rem 0.625rem;
   height: 100%;
   padding: 1.5rem;
+  width: 100%;
 }
 
 .card-product__info-category {
   font-size: 0.875rem;
   letter-spacing: 0.2rem;
-  margin-bottom: 0.5rem;
 }
 
 .card-product__info-name {
@@ -65,13 +75,11 @@ html {
   font-family: "Fraunces", sans-serif;
   font-size: 2rem;
   line-height: 2.2rem;
-  margin-bottom: 1rem;
 }
 
 .card-product__info-description {
   font-size: 0.875rem;
   line-height: 1.4rem;
-  margin-bottom: 1.2rem;
 }
 
 .card-product__price {
@@ -79,7 +87,6 @@ html {
   flex-flow: row;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
 
 .card-product__price-discount {
@@ -93,14 +100,43 @@ html {
 }
 
 button {
-  outline: none;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  outline: none;
 }
 
 .btn--primary {
   background-color: var(--dark-cyan);
-  color: var(--white);
-  padding: 1rem 0;
   border-radius: 0.625rem;
+  color: var(--white);
+  font-weight: bold;
+  padding: 1rem 0;
   width: 100%;
+}
+
+/* Media Queries */
+/* Large */
+@media (min-width: 992px) {
+  .card-product {
+    flex-flow: row;
+    height: 500px;
+    width: 600px;
+  }
+
+  .card-product__image {
+    display: none;
+  }
+
+  .card-product__image-desktop {
+    display: block;
+    border-radius: 00.625rem 0 0 0.625rem;
+  }
+
+  .card-product__info {
+    padding: 1.5rem 2rem;
+    border-radius: 0 0.625rem 0.625rem 0;
+  }
 }
