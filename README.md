@@ -10,7 +10,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ## Links
 
-- Live Site URL: [Add live site URL here](https://card-product-component-kyuavhzkp-alansalas.vercel.app/)
+- Live Site URL: [Live demo](https://card-product-component-kyuavhzkp-alansalas.vercel.app/)
 
 ## Built with
 
